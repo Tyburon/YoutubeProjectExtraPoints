@@ -42,7 +42,9 @@ public class Video implements VideoActions{
     }
 
     public void setReview(int review) {
-        this.review = review;
+        int newReview = 0;
+        newReview = (int) ((this.review + review)/this.views);
+        this.review = newReview;
     }
 
     public int getViews() {
